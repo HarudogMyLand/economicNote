@@ -24,13 +24,57 @@
 
 囚徒困境是典型的纳什均衡，研究纳什均衡的一个方法是绘制收益矩阵：
 
-$$
-& \text{Prisoner B} \\
-\text{Prisoner A} & \text{Silent} & \text{Talk} \\
+<svg id="prisoners-dilemma" width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="800" height="500" fill="#f8f9fa" rx="8" />
+                <text x="570" y="90" text-anchor="middle" font-size="20" font-weight="bold" fill="#3498db">囚徒 B</text>
+                <g transform="translate(80, 250) rotate(-90)">
+                </g>
+                <rect x="150" y="110" width="500" height="280" fill="white" stroke="#2c3e50" stroke-width="2" />
+                <line x1="350" y1="110" x2="350" y2="390" stroke="#2c3e50" stroke-width="2" />
+                <line x1="550" y1="110" x2="550" y2="390" stroke="#2c3e50" stroke-width="2" />
+                <line x1="150" y1="190" x2="650" y2="190" stroke="#2c3e50" stroke-width="2" />
+                <line x1="150" y1="270" x2="650" y2="270" stroke="#2c3e50" stroke-width="2" />
+                <rect x="150" y="110" width="200" height="80" fill="#e8f4fc" />
+                <rect x="350" y="110" width="200" height="80" fill="#e8f4fc" />
+                <rect x="150" y="190" width="200" height="80" fill="#fdeaea" />
+                <rect x="150" y="270" width="200" height="80" fill="#fdeaea" />
+                <text x="250" y="155" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">沉默</text>
+                <text x="450" y="155" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">坦白</text>
+                <text x="250" y="235" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">沉默</text>
+                <text x="250" y="315" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">坦白</text>
+                <g id="cell1">
+                    <rect x="350" y="190" width="200" height="80" fill="#d5f4e6" />
+                    <text x="450" y="235" text-anchor="middle" font-size="22" font-weight="bold" fill="#27ae60">(1, 1)</text>
+                    <text x="420" y="260" text-anchor="middle" font-size="16" fill="#555">各判1年</text>
+                </g>
+                <g id="cell2">
+                    <rect x="550" y="190" width="100" height="80" fill="#fef9e7" />
+                    <text x="600" y="235" text-anchor="middle" font-size="22" font-weight="bold" fill="#f39c12">(5, 0)</text>
+                    <text x="600" y="260" text-anchor="middle" font-size="16" fill="#555">A:5年, B:0年</text>
+                </g>
+                <g id="cell3">
+                    <rect x="350" y="270" width="200" height="80" fill="#fef9e7" />
+                    <text x="450" y="315" text-anchor="middle" font-size="22" font-weight="bold" fill="#f39c12">(0, 5)</text>
+                    <text x="450" y="340" text-anchor="middle" font-size="16" fill="#555">A:0年, B:5年</text>
+                </g>
+                <g id="cell4">
+                    <rect x="550" y="270" width="100" height="80" fill="#fadbd8" />
+                    <text x="600" y="315" text-anchor="middle" font-size="22" font-weight="bold" fill="#e74c3c">(3, 3)</text>
+                    <text x="600" y="340" text-anchor="middle" font-size="16" fill="#555">各判3年</text>
+                </g>
+                <path id="arrow1" d="M 480 180 Q 500 160 520 140" fill="none" stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead)" />
+                <text x="520" y="130" font-size="14" fill="#3498db">B的决策</text> 
+                <path id="arrow2" d="M 140 240 Q 120 240 100 240 Q 80 240 60 220" fill="none" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead)" />
+                <text x="30" y="210" font-size="14" fill="#e74c3c">A的决策</text>
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#3498db" />
+                    </marker>
+                </defs>
+                <circle id="nash-equilibrium" cx="600" cy="315" r="8" fill="none" stroke="#e74c3c" stroke-width="3" opacity="0" />
+                <rect id="dominant-strategy" x="545" y="105" width="110" height="170" fill="none" stroke="#9b59b6" stroke-width="3" stroke-dasharray="5,5" opacity="0" />
+</svg>
 
-\text{Silent} & (1, 1) & (5, 0) \\
-\text{Talk} & (0, 5) & (3, 3) \\
-$$
 
 可见对于每个囚徒，他们的**占优策略**就是招供，然而这必然导致双方都达到一个折中的刑期（纳什均衡结果：A=3，B=3），且该结果比 “双方都沉默”（A=1，B=1）的总收益更低。
 
