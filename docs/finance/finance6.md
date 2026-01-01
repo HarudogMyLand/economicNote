@@ -5,54 +5,77 @@
 - 金融资产定价原理
 - 证券定价
 
-## 金融资产收益和风险的衡量
+这一节内容繁多，而且全都是重点，因此我们单独拎出来进行复习。
 
-利率是连接金融资产未来现金流和当前资产价格的纽带。对于任何一种资产或者投资几乎，其当前价值就是未来所有现金流贴现和：
+## 金融资产收益和风险（重点）
+
+利率是金融资产定价基准因素，是连接金融资产未来现金流和当前资产价格的纽带。
+
+金融资产持有者的收益包括利息，股息与红利等现金流收益与资产买卖价格差收益。同时，也面临着未来收益与损失的不确定性——即风险。风险分为系统风险和非系统风险。
+
+### 金融资产度量
+
+1. 收益率度量
+
+对于任何一种资产或者投资，其当前价值就是未来所有现金流贴现和：
 $$
-P_0 = \sum^T_{i=1}\frac{B_i}{(1+r)^i}
+P_0 = \sum^T_{i=1}\frac{C_i}{(1+r)^i}
 $$
-因此，收益率：
+因此，一年收益率：
 $$
 r=\frac{C}{P_0}+\frac{P_1-P_0}{P_0}
 $$
-然而未来价格 $P_1$ 是不确定的，因此预期收益率计算为：
+债券定价为 
+$$
+\sum^T_{i=1}\frac{C}{(1+y_{TM})^i}+\frac{FV}{(1+y_{TM})^T}=P
+$$
+
+
+2. 非组合投资收益风险
+
+预期收益率将会是投资收益率各种取值的加权平均值。使用数学期望估计预期收益率，计算为：
+
 $$
 \bar{r} = \sum^n_{i=1}p_ir_i
 $$
+特别的，如果未来收益率概率分布的过去样本点基本服从正态分布，那么也可认为未来投资收益率也服从正态分布。
+
 风险使用标准差计算：
 $$
 \sigma = \sqrt{\sum^n_{i=1}p_i(r_i -\bar{r})}
 $$
 
-### 组合投资收益与风险
+3. 资产组合投资收益风险
 
-以各资产占比为权重 $\omega$ 收益率期望为
+分散风险，采用投资组合策略。组合收益率将会是所有期望收益率的加权平均值：
 $$
-r_p = \sum^n_{i=1}\omega_i \bar{r_i}
+r_p=\sum^n_{i=1}\omega_i \overline{r_i}
 $$
-风险为：
+风险将会是
 $$
-\sigma = \sqrt{\sum^n_{i=1}\omega^2_i\sigma^2_i + \sum_{1\le i \lt j\le n} \omega_i \omega_j \sigma_i \sigma_j \rho_{ij}}
+\sigma_p=\sqrt{\sum^n_{i=1}\omega_i^2 \sigma_i^2+2\sum_{1\le i \lt j \le n}\omega_i \omega_j\sigma_i \sigma_j\rho_{ij}}
 $$
-其中 $\rho_{ij}$ 是相关系数。
+其中 $\rho_{ij}$ 是相关系数，相关系数小于1，分散风险的作用就能体现
 
 ### 现代投资组合理论
 
-如图所示是不同投资组合下的收益率与风险组合。
+一个理性的投资者通常是风险厌恶者，那么实现低风险的有效资产组合式投资管理的核心。
+
+现代资产组合理论又称证券投资组合理论，经历多次发展迭代。通过资产多元化来分散非系统性风险是资产组合理论的核心思想。
 
 由于**系统风险**的存在，某些收益率与风险的组合是投资组合无法覆盖的，即无法通过分散化投资来消除。
 
-我们把投资组合覆盖区域的边界视为我们投资组合的一个极端。而**有效边界**是风险相同、收益最大，或收益相同、风险最小组合点的连线。有效边界上的资产组合为有效组合。
+我们把投资组合覆盖区域的边界视为我们投资组合的一个极端。**有效边界**是风险相同、收益最大，或收益相同、风险最小组合点的连线。有效边界上的资产组合为有效组合。
 
 <center><svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="background-color: #f5f5f5; border: 1px solid #ccc;">     <defs>         <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">             <path d="M0,0 L0,6 L9,3 z" fill="#000" />         </marker>     </defs>     <line x1="60" y1="350" x2="60" y2="60" stroke="#000" stroke-width="1.5" marker-end="url(#arrow)" />     <line x1="60" y1="350" x2="530" y2="350" stroke="#000" stroke-width="1.5" marker-end="url(#arrow)" />     <text x="20" y="50" class="axis-label" fill="black">期望收益率</text>     <text x="20" y="80" class="math-label" fill="black">E(r)</text>     <text x="500" y="380" class="axis-label" fill="black">风险σ</text>     <path d="M 230 330 C 130 280 100 240 100 200 C 100 160 130 120 520 80" stroke="#000" stroke-width="2" fill="none" />     <circle cx="100" cy="200" r="4" fill="black" />     <text x="75" y="205" class="point-label" fill="black">A</text>     <circle cx="300" cy="122" r="4" fill="black" />          <circle cx="115" cy="165" r="4" fill="black" />     <text x="100" y="160" class="point-label" fill="black">D</text>     <circle cx="300" cy="165" r="4" fill="black" />     <text x="310" y="185" class="point-label" fill="black">C</text>         <circle cx="180" cy="220" r="3" fill="black" />     <circle cx="210" cy="250" r="3" fill="black" />     <circle cx="260" cy="230" r="3" fill="black" />     <circle cx="330" cy="210" r="3" fill="black" />     <circle cx="400" cy="190" r="3" fill="black" />     <circle cx="450" cy="150" r="3" fill="black" />     <circle cx="380" cy="140" r="3" fill="black" />     <circle cx="220" cy="180" r="3" fill="black" />     <circle cx="280" cy="190" r="3" fill="black" />     <circle cx="350" cy="260" r="3" fill="black" />     <circle cx="420" cy="280" r="3" fill="black" />     <circle cx="320" cy="290" r="3" fill="black" />     <circle cx="250" cy="280" r="3" fill="black" />     <circle cx="140" cy="225" r="3" fill="black" />     <circle cx="480" cy="180" r="3" fill="black" />     <circle cx="350" cy="150" r="3" fill="black" />     <circle cx="420" cy="110" r="3" fill="black" />     <circle cx="250" cy="150" r="3" fill="black" />     <circle cx="480" cy="90" r="3" fill="black" />     <circle cx="220" cy="130" r="3" fill="black" />     <circle cx="180" cy="190" r="3" fill="black" />     <circle cx="400" cy="240" r="3" fill="black" />     <circle cx="115" cy="210" r="3" fill="black" />     <circle cx="440" cy="220" r="3" fill="black" /> </svg></center>
 
 如图所示，其中 $A$ 点以上就是有效边界的示意。
 
-## 利率与有价证券价值评估
+## 利率与有价证券价值评估（重点）
 
 ### 有价证券价值评估原理
 
-l证券的内在价值，是证券未来收益的现值，取决于预期收益与市场收益率水平，也称证券的理论价值。证券的内在价值采用**现金流折现法**计算。
+证券的内在价值，是证券未来收益的现值，取决于预期收益与市场收益率水平，也称证券的理论价值。证券的内在价值采用**现金流折现法**计算。
 
 - 绝对价值评估：指将公司未来可能创造的现金流或公司未来可能分配的股息，按一定折现率进行折现，来评估公司的内在价值。
 - 相对价值评估：是通过比较公司的基本面数据和市场数据来确定股票的相对价值。有价证券的相对价值评估通常使用市盈率、市净率等指标。
@@ -61,20 +84,45 @@ l证券的内在价值，是证券未来收益的现值，取决于预期收益�
 
 绝对价值评估
 
+- 债权价值评估：债券的评估一般比较容易，无论什么支付方式，只要能确定现金流即可。
+
+1. 零息债券：没有利息，到期支付一次现金流
+
+$$
+P_B=\frac{A}{(1+r)^n}
+$$
+
+2. 付息债券：分期付息、到期一次还本
+   $$
+   P_B=\sum^n_{i=1}\frac{C}{(1+r)^t}+\frac{M}{(1+r)^n}
+   $$
+
+3. 永续债券：分期付息、无到期日
+   $$
+   P_B=\frac{C}{r}
+   $$
+   
+
 - 股票价值评估：股票收益是不稳定的，现金流折现法计算需要更多工作。对于优先股，价值评估类似于永续债权，而普通股需要全部折算为现值。
 
 $$
-P=\sum^{\infty}_{i=1}\frac{C_i}{(1+e)^i}=\frac{(1+g)D_0}{r-g}
+P=\sum^{\infty}_{i=1}\frac{C_i}{(1+r)^i}
 $$
 
+假定分红等比上升，预期增长率 $g$ 小于 $r$，$C_0$ 为当期每股收益，则
+$$
+P_s=\sum^\infty_{i=1}\frac{C_0(1+g)^t}{(1+r)^t}=\frac{(1+g)C_0}{r-g}
+$$
 相对价值评估
 
 - 市盈率 (PE) = 股票市价 / 每股盈余：越低，回收期越短，投资价值越大
 - 市净率 (PB) = 股票市价 / 每股净资产：越低，投资价值越高，反之则反
 
-### 金融市场定价模型
+### 金融市场定价模型（重点）
 
 #### 马科维茨模型 MPT
+
+如上所述，就是现代资产组合投资理论的前身。
 
 核心思想是分散化投资，构建不同资产组合降低**整体风险**。
 
