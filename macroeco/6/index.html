@@ -20,7 +20,7 @@
     
     
       
-        <title>4 - Harudog's Note</title>
+        <title>6 - Harudog's Note</title>
       
     
     
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4
+              6
             
           </span>
         </div>
@@ -1349,7 +1349,7 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      货币市场
+      劳动力市场概况
     </span>
   </a>
   
@@ -1358,18 +1358,66 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      债券和利率
+      工资决定：工人视角
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工资决定：工人视角">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      工资决定方程
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      均衡下的利率
+      价格决定：公司视角
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="价格决定：公司视角">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      自然失业率：均衡视角
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      失业、就业与产出
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      中期
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1389,223 +1437,234 @@
 
 
 
-  <h1>4</h1>
+  <h1>6</h1>
 
-<p>我们转向另一个领域：利率是怎么确定的？很明显这与金融市场相关。金融市场极其复杂，因此必须将其简化。研究金融市场的目的就是为了更好的理解央行是怎么确定利率的。</p>
-<p>提一嘴美国，美国的央行是联邦储备系统（Federal Reserve System），理事会设在华盛顿，有七位理事，美联储主席将会是成员之一。12家地区银行将作为联邦储备银行，而联邦开放市场委员会（FOMC）将制定利率决议。</p>
-<p>欧盟则不同，每个国家都派出一名成员，不过此外与美国很类似。</p>
-<p>为什么要关注货币政策（Monetary Policy）？因为货币政策将会是短期内极好的工具。货币政策与财政政策（Fiscal Policy）是短期内调节总产量的好办法。货币政策在短期内很灵活，但是中长期来看，起效持续性不如财政政策。</p>
-<h2 id="_1">货币市场<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>货币政策在金融市场起作用。金融市场有数百万种工具（Financial Instrument）！为了简化金融市场，我们假定投资者只有两种金融资产的选择：<strong>货币</strong>和<strong>债券</strong>。</p>
+<blockquote>
+<p>在中期，经济倾向于向与自然失业率对应的产出水平回归</p>
+</blockquote>
+<p>劳动力市场是衡量经济健康状况的重要指标，其状况是通货膨胀率的主要驱动因素之一。</p>
+<p>回顾一下劳动力的几个概念定义，失业率，就业率，劳动参与率等等。 </p>
+<h2 id="_1">劳动力市场概况<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>在分析劳动力市场时，我们关注的是<strong>人口、劳动力、就业与失业</strong>之间的关系。</p>
 <ul>
-<li><strong>货币</strong>用于交易（Transaction），例如流通中现金<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>；</li>
-<li><strong>债券</strong>无法交易<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>，但是可以提供利率回报；</li>
+<li><strong>非劳动力</strong> 既没有工作也不找工作的人。</li>
+<li><strong>劳动力：</strong> 就业者 (<span class="arithmatex">\(N\)</span>) + 失业者 (<span class="arithmatex">\(U\)</span>)。</li>
+<li><strong>失业率：</strong> 失业人数占劳动力的百分比，<span class="arithmatex">\(u = U/L\)</span>。</li>
+<li><strong>参与率：</strong> 劳动力占劳动年龄人口的比例。</li>
 </ul>
-<p>人们有一定的货币，那么有要花费多少到债券上？多少保留？选择合理的权衡才能达到利益最大化。选择的比例，很明显取决于人们对交易的需求与利率的比例关系。</p>
-<p>如果利率变高，以至于直接购买债券就能够获得很高的收益（超过了交易能带来的收益），那么该买点债券了。</p>
-<div class="arithmatex">\[M^d=\$YL(i)\]</div>
-<p>名义GDP增加的情况下</p>
-<p><svg width="600" height="500" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
-  <!-- 定义箭头标记 --></p>
-<p><defs>
-    <!-- 坐标轴箭头 -->
-    <marker id="axisArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="black" />
+<p>对于失业率的理解，有一个经典例子，来自布兰查德德书：</p>
+<blockquote>
+<p>假设一个机场挤满了乘客，一种原因可能是该机场非常繁忙，有许多飞机起飞和降落，而众多乘客也迅速出入于机场之间；另一种原因可能是坏天气延误了航班导致乘客滞留，乘客在等待天气转好。
+在两种情况下乘客人数可能是相同的，但他们的情形却是完全不同的。在第二种情形的乘客多半会更沮丧。</p>
+</blockquote>
+<p><svg width="600" height="450" viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" style="background-color: white; font-family: sans-serif;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000" />
     </marker>
-    <!-- 移动指示箭头 -->
-    <marker id="moveArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="black" />
-    </marker>
-  </defs>
-  <!-- 背景 --></p>
-<p><rect width="100%" height="100%" fill="white" />
-  <!-- 1. 坐标轴 --></p>
-<!-- Y轴: Interest rate i -->
-<p><line x1="60" y1="450" x2="60" y2="50" stroke="black" stroke-width="1.5" marker-end="url(#axisArrow)" />
-  <!-- X轴: Money M --></p>
-<p><line x1="60" y1="450" x2="560" y2="450" stroke="black" stroke-width="1.5" marker-end="url(#axisArrow)" />
-  <!-- 轴标签 --></p>
-<p><text x="45" y="250" font-family="Arial, sans-serif" font-size="14" transform="rotate(-90, 45, 250)" text-anchor="middle">Interest rate, i</text>
-  <text x="560" y="475" font-family="Arial, sans-serif" font-size="14" text-anchor="end">Money, M</text>
-  <!-- 2. 需求曲线 (向下倾斜) --></p>
-<!-- 曲线 Md (左侧) -->
-<!-- 使用贝塞尔曲线 (Q) 模拟弧度 -->
-<p><path d="M 130 50 Q 140 350 420 420" fill="none" stroke="black" stroke-width="2" />
-  <!-- 曲线 Md' (右侧，移动后) --></p>
-<p><path d="M 230 50 Q 240 350 520 420" fill="none" stroke="black" stroke-width="2" />
-  <!-- 5. 曲线标签 --></p>
-<!-- Md 标签 -->
-<p><text x="360" y="380" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Md</text>
-  <text x="360" y="400" font-family="Arial, sans-serif" font-size="12">(for nominal</text>
-  <text x="360" y="415" font-family="Arial, sans-serif" font-size="12">income $Y)</text>
-  <!-- Md' 标签 --></p>
-<p><text x="460" y="350" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Md'</text>
-  <text x="460" y="370" font-family="Arial, sans-serif" font-size="12">(for</text>
-  <text x="460" y="385" font-family="Arial, sans-serif" font-size="12">$Y' &gt; $Y)</text>
+  </defs></p>
+<p><circle cx="300" cy="120" r="50" fill="none" stroke="black" stroke-width="1.5" />
+  <text x="300" y="115" text-anchor="middle" font-size="16">就业:</text>
+  <text x="300" y="140" text-anchor="middle" font-size="16">132.4</text></p>
+<p><circle cx="200" cy="330" r="50" fill="none" stroke="black" stroke-width="1.5" />
+  <text x="200" y="325" text-anchor="middle" font-size="16">失业: 8.4</text></p>
+<p><circle cx="400" cy="330" r="50" fill="none" stroke="black" stroke-width="1.5" />
+  <text x="400" y="325" text-anchor="middle" font-size="16">非劳动力</text>
+  <text x="400" y="350" text-anchor="middle" font-size="16">73.3</text></p>
+<p><path d="M 280,75 Q 300,20 320,75" fill="none" stroke="black" stroke-width="1" marker-end="url(#arrowhead)" />
+  <text x="300" y="45" text-anchor="middle" font-size="14">3.1</text></p>
+<p><path d="M 270,165 L 220,285" fill="none" stroke="black" stroke-width="1" marker-end="url(#arrowhead)" />
+  <text x="235" y="215" text-anchor="middle" font-size="14" transform="rotate(-65, 235, 215)">1.8</text></p>
+<p><path d="M 245,290 L 290,175" fill="none" stroke="black" stroke-width="1" marker-end="url(#arrowhead)" />
+  <text x="275" y="240" text-anchor="middle" font-size="14" transform="rotate(-65, 275, 240)">2.1</text></p>
+<p><path d="M 325,165 L 380,285" fill="none" stroke="black" stroke-width="1" marker-end="url(#arrowhead)" />
+  <text x="365" y="215" text-anchor="middle" font-size="14" transform="rotate(65, 365, 215)">3.6</text></p>
+<p><path d="M 355,290 L 310,175" fill="none" stroke="black" stroke-width="1" marker-end="url(#arrowhead)" />
+  <text x="325" y="240" text-anchor="middle" font-size="14" transform="rotate(65, 325, 240)">3.3</text></p>
+<p><path d="M 255,340 L 345,340" fill="none" stroke="black" stroke-width="1" marker-end="url(#arrowhead)" />
+  <text x="300" y="360" text-anchor="middle" font-size="14">1.9</text></p>
+<p><path d="M 345,320 L 255,320" fill="none" stroke="black" stroke-width="1" marker-end="url(#arrowhead)" />
+  <text x="300" y="310" text-anchor="middle" font-size="14">1.8</text>
 </svg></p>
-<p>在这个图中，我们看到名义GDP <span class="arithmatex">\(\$Y\)</span><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> 变大了，这意味着交易变多了，支出变多了，需要更多货币用于交易。</p>
-<p>央行是垄断货币供给的唯一机构，负责货币的供应。假定央行货币供给是 <span class="arithmatex">\(M\)</span></p>
-<p><span class="arithmatex">\(<span class="arithmatex">\(M^S=M^d=\$YL(i)\)</span>\)</span>
-为了分析，我们假定央行决定进行<strong>扩张性货币政策</strong>，发行更多的货币。这种情况下，如果要保持原有均衡，就需要降低利率。<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
-<p><svg width="600" height="500" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
-  <!-- 定义箭头标记 --></p>
-<p><defs>
-    <!-- 坐标轴箭头 -->
-    <marker id="axisArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="black" />
-    </marker>
-    <!-- 移动指示箭头 (蓝色风格) -->
-    <marker id="shiftArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#4472C4" />
-    </marker>
-  </defs>
-  <!-- 背景 --></p>
-<p><rect width="100%" height="100%" fill="white" />
-  <!-- 1. 坐标轴 --></p>
-<!-- Y轴: Interest rate i -->
-<p><line x1="60" y1="450" x2="60" y2="50" stroke="black" stroke-width="1.5" marker-end="url(#axisArrow)" />
-  <!-- X轴: Money M --></p>
-<p><line x1="60" y1="450" x2="560" y2="450" stroke="black" stroke-width="1.5" marker-end="url(#axisArrow)" />
-  <!-- 轴标签 --></p>
-<p><text x="45" y="250" font-family="Arial, sans-serif" font-size="14" font-weight="bold" transform="rotate(-90, 45, 250)" text-anchor="middle">Interest rate, i</text>
-  <text x="560" y="475" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="end">Money, M</text>
-  <!-- 2. 货币供给线 (Vertical Lines) - 蓝色 --></p>
-<!-- Ms (左侧) x=220 -->
-<p><line x1="220" y1="50" x2="220" y2="450" stroke="#4472C4" stroke-width="2" />
-  <text x="230" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4472C4" font-style="italic">M<tspan dy="-5" font-size="10">s</tspan></text>
-  <!-- Ms' (右侧) x=340 --></p>
-<p><line x1="340" y1="50" x2="340" y2="450" stroke="#4472C4" stroke-width="2" />
-  <text x="350" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4472C4" font-style="italic">M<tspan dy="-5" font-size="10">s'</tspan></text>
-  <!-- 3. 货币需求曲线 Md (Teal色) --></p>
-<!-- 经过计算的贝塞尔曲线，确保经过点(220, 279)和(340, 351) -->
-<!-- Start(140, 50) Control(140, 380) End(540, 380) -->
-<p><path d="M 140 50 Q 140 380 540 380" fill="none" stroke="#006666" stroke-width="2.5" />
-  <text x="500" y="370" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#006666" font-style="italic">M<tspan dy="-5" font-size="10">d</tspan></text>
-  <!-- 4. 虚线投影与均衡点 --></p>
-<!-- 均衡点 A (220, 279) -->
-<!-- 水平虚线 i -->
-<p><line x1="60" y1="279" x2="220" y2="279" stroke="#666" stroke-width="1" stroke-dasharray="5,5" />
-  <text x="50" y="284" font-family="Arial, sans-serif" font-size="14" font-style="italic" text-anchor="end">i</text>
-  <!-- 底部标签 M --></p>
-<p><text x="220" y="470" font-family="Arial, sans-serif" font-size="14" font-style="italic" text-anchor="middle">M</text>
-  <!-- 均衡点 A' (340, 351) --></p>
-<!-- 水平虚线 i' -->
-<p><line x1="60" y1="351" x2="340" y2="351" stroke="#666" stroke-width="1" stroke-dasharray="5,5" />
-  <text x="50" y="356" font-family="Arial, sans-serif" font-size="14" font-style="italic" text-anchor="end">i'</text>
-  <!-- 底部标签 M' --></p>
-<p><text x="340" y="470" font-family="Arial, sans-serif" font-size="14" font-style="italic" text-anchor="middle">M'</text>
-  <!-- 交点圆点 --></p>
-<p><circle cx="220" cy="279" r="4" fill="black" />
-  <text x="230" y="275" font-family="Arial, sans-serif" font-size="14" font-weight="bold">A</text>
-  <circle cx="340" cy="351" r="4" fill="black" />
-  <text x="350" y="345" font-family="Arial, sans-serif" font-size="14" font-weight="bold">A'</text>
-  <!-- 5. 移动指示箭头 (Shift Arrow) --></p>
-<p><line x1="240" y1="100" x2="310" y2="100" stroke="#4472C4" stroke-width="2" marker-end="url(#shiftArrow)" />
-</svg></p>
-<p>在经济变热的情况下，名义GDP上升了，此时我们知道 <span class="arithmatex">\(M^d\)</span> 曲线右移，如果央行 Do Nothing，利率就要自动上升。</p>
-<p><svg width="600" height="500" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
-  <!-- 定义箭头标记 --></p>
-<p><defs>
-    <!-- 坐标轴箭头 -->
-    <marker id="axisArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="black" />
-    </marker>
-    <!-- 移动指示箭头 (绿色风格) -->
-    <marker id="shiftArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#008080" />
-    </marker>
-  </defs>
-  <!-- 背景 --></p>
-<p><rect width="100%" height="100%" fill="white" />
-  <!-- 1. 坐标轴 --></p>
-<!-- Y轴: Interest rate i -->
-<p><line x1="60" y1="450" x2="60" y2="50" stroke="black" stroke-width="1.5" marker-end="url(#axisArrow)" />
-  <!-- X轴: Money M --></p>
-<p><line x1="60" y1="450" x2="560" y2="450" stroke="black" stroke-width="1.5" marker-end="url(#axisArrow)" />
-  <!-- 轴标签 --></p>
-<p><text x="45" y="250" font-family="Arial, sans-serif" font-size="14" font-weight="bold" transform="rotate(-90, 45, 250)" text-anchor="middle">Interest rate, i</text>
-  <text x="300" y="490" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Money, M</text>
-  <!-- 2. 货币供给线 (Vertical Line) - 深蓝色 --></p>
-<!-- Ms 固定在 x=300 -->
-<p><line x1="300" y1="40" x2="300" y2="450" stroke="#204a87" stroke-width="2" />
-  <text x="310" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#204a87" font-style="italic">M<tspan dy="-5" font-size="10">s</tspan></text>
-  <!-- 底部标签 M --></p>
-<p><text x="300" y="470" font-family="Arial, sans-serif" font-size="14" font-style="italic" text-anchor="middle">M</text>
-  <!-- 3. 货币需求曲线 (Curves) - 蓝绿色 (Teal) --></p>
-<!-- Md (原始曲线 - 下方) -->
-<!-- 经过点 A(300, 320) -->
-<p><path d="M 160 50 Q 180 350 500 400" fill="none" stroke="#699c9c" stroke-width="2.5" />
-  <text x="440" y="380" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#699c9c" font-style="italic">M<tspan dy="-5" font-size="10">d</tspan></text>
-  <!-- Md' (新曲线 - 上方) --></p>
-<!-- 经过点 A'(300, 180) -->
-<p><path d="M 240 40 Q 260 340 540 390" fill="none" stroke="#006666" stroke-width="2.5" />
-  <text x="500" y="360" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#006666" font-style="italic">M<tspan dy="-5" font-size="10">d</tspan>'</text>
-  <text x="500" y="380" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="black">($Y' &gt; $Y)</text>
-  <!-- 4. 均衡点与虚线投影 --></p>
-<!-- 均衡点 A (300, 320) - 低利率 -->
-<p><line x1="60" y1="320" x2="300" y2="320" stroke="#666" stroke-width="1" stroke-dasharray="5,5" />
-  <text x="50" y="325" font-family="Arial, sans-serif" font-size="14" font-style="italic" text-anchor="end">i</text>
-  <circle cx="300" cy="320" r="4" fill="black" />
-  <text x="310" y="320" font-family="Arial, sans-serif" font-size="14" font-weight="bold">A</text>
-  <!-- 均衡点 A' (300, 180) - 高利率 --></p>
-<p><line x1="60" y1="245" x2="300" y2="245" stroke="#666" stroke-width="1" stroke-dasharray="5,5" />
-  <text x="50" y="250" font-family="Arial, sans-serif" font-size="14" font-style="italic" text-anchor="end">i'</text>
-  <circle cx="300" cy="245" r="4" fill="black" />
-  <text x="310" y="245" font-family="Arial, sans-serif" font-size="14" font-weight="bold">A'</text>
-  <!-- 5. 移动指示箭头 (Shift Arrow) --></p>
-<p><line x1="180" y1="80" x2="250" y2="80" stroke="#008080" stroke-width="2" marker-end="url(#shiftArrow)" />
-</svg></p>
-<p>这不行，央行正在试图调节 <span class="arithmatex">\(m\)</span> ，走极端的一种，就是直升机撒钱，是一种极端货币政策，央行直接向公众发放货币以刺激消费：刺激流动性的需求。</p>
-<p>但是正常情况下，央行调节 <span class="arithmatex">\(m\)</span> 主要通过三大法宝之一：公开市场操作，分为扩张性和紧缩性。具体而言，央行发行证券收回货币流动性（紧缩性），或者购买证券输入流动性（扩张性）。</p>
-<p>如果央行购买债券，那么债券需求将会增加，此时债券价格上涨，利率自然就会下降了。为什么？</p>
-<h2 id="_2">债券和利率<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>假定债券保证明年给定 $100 作为收益，那么利率（收益率）就是</p>
-<div class="arithmatex">\[
-i=\frac{\$100-\$P_{B}}{\$P_{B}}
-\]</div>
-<p>所以利率和债券的价格成反相关，原来如此</p>
-<h2 id="_3">均衡下的利率<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>我们将讨论一点更技术性的描述。在之前的简单模型中，我们假设只有“央行”和“个人”，钱就是现金。但在现实中，我们大部分钱是存在银行里的（存款）。</p>
-<p>在金融市场中有很多金融中介机构，这里面最重要的机构之一就是银行。银行产生<strong>支票存款（Checkable Deposit）</strong>。存款是货币的一部分。</p>
-<p>银行自己的存款称为银行准备金（Reserves），存在中央银行，对央行来说，称为央行货币（Central Bank Money）或者基础货币（High Power Money）。</p>
-<p>为了简化计算，假设人们手里不拿现金，所有的钱都以支票存款的形式存在银行里。所以，人们对货币的需求将等于对存款的需求：</p>
-<div class="arithmatex">\[
-M^d=\$YL(i)
-\]</div>
-<p>既然钱都在银行里，那银行需要什么？</p>
+<p>这张图来自 Fleischman and Fallick 编制的计算序列，数据来自于 http://www.federalreserve.gov/econresdata/researchdata.htm</p>
+<p>值得注意的是，流入非劳动力的人口非常巨大，同时非劳动力流入劳动力市场的流量亦不可忽视。这说明非劳动力市场中的个体并非不参与生产，布兰查德将其称为“丧失信心的“工人，如果有明显的劳动机会，他们会参与生产。因此就业率有时比失业率更为客观。</p>
+<p>然而，我们依然按照传统将失业率作为测量劳动力市场的指标。</p>
+<h2 id="_2">工资决定：工人视角<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>在讨论了失业之后，我们来研究工资决定以及工资和失业的关系。</p>
+<p>工资并不是简单由供需曲线交点决定的，而是通过<strong>集体谈判</strong>或<strong>个体议价</strong>达成的<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>。但是，虽然各国工资制度差异显著，也有一些共同影响因素。工人必须拿到<strong>保留工资</strong>，类似于保留价格，工人就业必须要有劳动的报酬。同时，失业率越高的情况下，工资一般越低。</p>
+<h3 id="_3">工资决定方程<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[W = P^e F(u, z)\]</div>
 <ul>
-<li>准备金：法定存款准备金</li>
-<li>准备金率：法定存款准备金占总存款的比例</li>
+<li><strong><span class="arithmatex">\(W\)</span> (名义工资)：</strong> 雇员拿到的货币工资。</li>
+<li><strong><span class="arithmatex">\(P^e\)</span> (预期价格水平)：</strong> 工人关心的是<strong>实际工资</strong> (<span class="arithmatex">\(W/P\)</span>)。由于合同通常是预先签订的，所以取决于对未来价格的预期。<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></li>
+<li><strong><span class="arithmatex">\(u\)</span> (失业率)：</strong> 失业率越高，工人的议价能力（Bargaining Power<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>）越低，工资越低。</li>
+<li><strong><span class="arithmatex">\(z\)</span> (结构性变量)：</strong> 包含所有影响工资的其他因素（如失业保险、最低工资法、工会保护）。<span class="arithmatex">\(z\)</span> 增加，工资上升。</li>
 </ul>
-<p>因为只有银行需要持有央行的钱（准备金），对基础货币的需求（<span class="arithmatex">\(H^d\)</span>）就等于对准备金的需求。</p>
-<div class="arithmatex">\[
-H^d=\theta \times M^d=\theta \$YL(i)
-\]</div>
-<p>设央行的基础货币供应量为 <span class="arithmatex">\(H\)</span>，则有</p>
-<div class="arithmatex">\[
-H=\theta \$YL(i)
-\]</div>
-<p>这就是均衡下的情况。这个公式解释了货币市场的供需均衡：</p>
-<div class="arithmatex">\[
-\frac{1}{\theta}H=\$YL(i)
-\]</div>
-<p>左边就是货币的供给量，右边就是货币的需求量。</p>
-<p>要是人们手里有存款也有现金，参考金融学的货币供给一节。</p>
-<hr />
+<p>工人的议价能力取决于公司找到劳动力的成本与工人自己求职的成本，所以，失业率上升的时候公司的劳动力市场充裕，工人议价能力下降。</p>
+<h2 id="_4">价格决定：公司视角<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>公司并非不愿意支付高于保留工资的工资，高工资可以吸引员工工作<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>。但是设定工资必须与公司商品的价格挂钩。价格决定于公司的成本，又取决于生产函数：</p>
+<p><span class="arithmatex">\(<span class="arithmatex">\(Y=AN\)</span>\)</span>
+其中 <span class="arithmatex">\(Y\)</span> 是产出，<span class="arithmatex">\(A\)</span> 是劳动生产率，<span class="arithmatex">\(N\)</span> 是雇佣就业，我们假定劳动是唯一生产要素，而资本等要素不在本模型之列。</p>
+<p>假设生产函数简化为 <span class="arithmatex">\(Y = AN\)</span>（简化为 1，长期的时候会继续讨论 <span class="arithmatex">\(A\)</span> 的变动 ），则边际成本就等于工资 <span class="arithmatex">\(W\)</span>（非常重要！）。</p>
+<p>由于企业通常具有一定的市场势力<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>，会在成本基础上加价：</p>
+<div class="arithmatex">\[P = (1 + m)W\]</div>
+<ul>
+<li><strong><span class="arithmatex">\(m\)</span> (Mark-up)：</strong> 价格加成。如果市场竞争激烈，<span class="arithmatex">\(m\)</span> 就会降低；如果是垄断市场，<span class="arithmatex">\(m\)</span> 就会升高，这和微观经济学中的理论是一致的。</li>
+<li><strong>由此推导出的实际工资：</strong> <span class="arithmatex">\(\frac{W}{P} = \frac{1}{1+m}\)</span></li>
+</ul>
+<h3 id="_5">自然失业率：均衡视角<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>自然失业率一点也不“自然”<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>。它不是由自然法则决定的，而是由经济结构决定的。它本质上是指当人们对价格的<strong>预期完全正确</strong>（<span class="arithmatex">\(P^e = P\)</span>）时的均衡失业率水平。</p>
+<p>在劳动力市场中，工资合同通常是基于对未来的<strong>预期价格 (<span class="arithmatex">\(P^e\)</span>)</strong> 签订的,工人可能会猜错价格（比如通胀比预想的高），此时失业率会偏离自然率。中长期内，人们会调整预期，错误会消失。因此，自然失业率被视为经济在中期**倾向于回归的平均水平。</p>
+<p>当<strong>工资设定 (WS)</strong> 与 <strong>价格设定 (PS)</strong> 相等时，市场达到均衡。</p>
+<ul>
+<li><strong>WS 关系：</strong> <span class="arithmatex">\(\frac{W}{P} = F(u, z)\)</span></li>
+<li><strong>PS 关系：</strong> <span class="arithmatex">\(\frac{W}{P} = \frac{1}{1+m}\)</span></li>
+</ul>
+<p>自然失业率方程：</p>
+<div class="arithmatex">\[F(u_n, z) = \frac{1}{1+m}\]</div>
+<p>这个方程决定了自然失业率与 <span class="arithmatex">\(z\)</span> ,<span class="arithmatex">\(m\)</span> 的关系。其中均衡的 <span class="arithmatex">\(u_{m}\)</span> 失业率称为<strong>自然失业率</strong>。改变 <span class="arithmatex">\(z,m\)</span> 就会相应地影响 <span class="arithmatex">\(u_{m}\)</span> 的动态平衡。例如，增加失业救济金发放：</p>
+<p><svg width="800" height="520" viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 --></p>
+<p><rect width="800" height="520" fill="white"/></p>
+<!-- 坐标轴（原点在左下） -->
+<p><line x1="120" y1="420" x2="120" y2="80" stroke="#000" stroke-width="2"/>
+  <line x1="120" y1="420" x2="720" y2="420" stroke="#000" stroke-width="2"/></p>
+<!-- 坐标轴箭头 -->
+<p><polygon points="120,60 114,74 126,74" fill="#000"/>
+  <polygon points="740,420 726,414 726,426" fill="#000"/></p>
+<!-- 坐标轴文字 -->
+<p><text x="40" y="260" transform="rotate(-90 40,260)" font-size="16">
+    实际工资 W/P
+  </text>
+  <text x="680" y="460" font-size="16">
+    失业率 u
+  </text></p>
+<!-- PS 水平线 -->
+<p><line x1="120" y1="260" x2="720" y2="260" stroke="#000" stroke-width="2"/>
+  <text x="730" y="265" font-size="14">PS</text></p>
+<!-- WS 曲线（明确经过 A） -->
+<!-- A = (300,260) -->
+<p><path d="M200 180
+           C 250 220, 280 245, 300 260
+           C 360 300, 460 360, 620 400"
+        fill="none" stroke="#888" stroke-width="2"/>
+  <text x="630" y="405" font-size="14" fill="#888">WS</text></p>
+<!-- WS' 曲线（明确经过 A'） -->
+<!-- A' = (420,260) -->
+<p><path d="M260 130
+           C 330 200, 380 235, 420 260
+           C 500 310, 600 350, 700 380"
+        fill="none" stroke="#000" stroke-width="2.5"/>
+  <text x="710" y="385" font-size="14">WS′</text></p>
+<!-- A 点 -->
+<p><circle cx="300" cy="260" r="4" fill="#000"/>
+  <text x="285" y="245" font-size="14">A</text></p>
+<!-- A' 点 -->
+<p><circle cx="420" cy="260" r="4" fill="#000"/>
+  <text x="405" y="245" font-size="14">A′</text></p>
+<!-- 垂直虚线到 x 轴 -->
+<p><line x1="300" y1="260" x2="300" y2="420"
+        stroke="#000" stroke-dasharray="6,6"/>
+  <line x1="420" y1="260" x2="420" y2="420"
+        stroke="#000" stroke-dasharray="6,6"/></p>
+<!-- u_n 与 u_n' -->
+<p><text x="285" y="445" font-size="14">uₙ</text>
+  <text x="405" y="445" font-size="14">uₙ′</text></p>
+<!-- WS 上移箭头 -->
+<p><line x1="260" y1="190" x2="260" y2="150" stroke="#000" stroke-width="2"/>
+  <polygon points="260,140 254,152 266,152" fill="#000"/></p>
+<!-- 标题 -->
+<p><text x="400" y="40" text-anchor="middle"
+        font-size="18" font-weight="bold">
+    失业救济金和自然失业率
+  </text>
+</svg>
+救济金的增加导致 <span class="arithmatex">\(z\)</span> 的增加，在给定失业率的情况下，增加了工资，工资制定曲线向上移动。即：在既定失业率下，失业救济金增加导致实际工资增加，高失业率促使实际工资回到企业愿意支付的水平。</p>
+<p>另一个例子是反托拉斯立法，也就是针对 <span class="arithmatex">\(m\)</span> 做文章。反垄断法的严格执行将会给予市场寡头当头一棒，迫使其降低 <span class="arithmatex">\(m\)</span> 的值。因此，自然失业率将会下降。</p>
+<p><svg width="800" height="520" viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 --></p>
+<p><rect width="800" height="520" fill="white"/></p>
+<!-- 坐标轴（原点在左下） -->
+<p><line x1="120" y1="420" x2="120" y2="80" stroke="#000" stroke-width="2"/>
+  <line x1="120" y1="420" x2="720" y2="420" stroke="#000" stroke-width="2"/></p>
+<!-- 坐标轴箭头 -->
+<p><polygon points="120,60 114,74 126,74" fill="#000"/>
+  <polygon points="740,420 726,414 726,426" fill="#000"/></p>
+<!-- 坐标轴文字 -->
+<p><text x="35" y="260" transform="rotate(-90 35,260)" font-size="16">
+    实际工资 W/P
+  </text>
+  <text x="680" y="460" font-size="16">
+    失业率 u
+  </text></p>
+<!-- PS 水平线 -->
+<p><line x1="120" y1="240" x2="720" y2="240" stroke="#000" stroke-width="2"/>
+  <text x="730" y="245" font-size="14">PS</text></p>
+<!-- PS' 水平线 -->
+<p><line x1="120" y1="300" x2="720" y2="300" stroke="#000" stroke-width="2"/>
+  <text x="730" y="305" font-size="14">PS′</text></p>
+<!-- WS 曲线（穿过 A 与 A'） -->
+<p><path d="
+    M 240 100
+    C 270 170, 290 215, 300 240
+    C 340 285, 390 295, 420 300
+    C 520 330, 620 360, 700 390
+  "
+        fill="none" stroke="#000" stroke-width="2.5"/>
+  <text x="710" y="395" font-size="14">WS</text></p>
+<!-- A 点 -->
+<p><circle cx="300" cy="240" r="4" fill="#000"/>
+  <text x="285" y="225" font-size="14">A</text></p>
+<!-- A' 点 -->
+<p><circle cx="420" cy="300" r="4" fill="#000"/>
+  <text x="405" y="285" font-size="14">A′</text></p>
+<!-- 垂直虚线 -->
+<p><line x1="300" y1="240" x2="300" y2="420"
+        stroke="#000" stroke-dasharray="6,6"/>
+  <line x1="420" y1="300" x2="420" y2="420"
+        stroke="#000" stroke-dasharray="6,6"/></p>
+<!-- u_n 与 u_n' -->
+<p><text x="285" y="445" font-size="14">uₙ</text>
+  <text x="405" y="445" font-size="14">uₙ′</text></p>
+<!-- 左侧工资标注（向左微调，避免与坐标轴重合） -->
+<p><text x="60" y="245" font-size="14">1/(1+m)</text>
+  <text x="60" y="305" font-size="14">1/(1+m′)</text></p>
+<!-- 向下箭头（价格加成上升） -->
+<p><line x1="500" y1="255" x2="500" y2="285" stroke="#000" stroke-width="2"/>
+  <polygon points="500,295 494,283 506,283" fill="#000"/></p>
+<!-- 标题 -->
+<p><text x="400" y="40" text-anchor="middle"
+        font-size="18" font-weight="bold">
+    价格加成和自然失业率
+  </text>
+</svg></p>
+<p><span class="arithmatex">\(z,m\)</span> 都是结构性经济变量，所以 <span class="arithmatex">\(u_{n}\)</span> 更应该称为结构性失业率，不过至今该名称都没有被普遍采用。</p>
+<h3 id="_6">失业、就业与产出<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>自然就业水平反映了自然失业均衡时的就业水平：<span class="arithmatex">\(<span class="arithmatex">\(N=L(1-u_{m})\)</span>\)</span>考虑到我们假定的生产函数 <span class="arithmatex">\(<span class="arithmatex">\(Y=AN\)</span>\)</span>有 <span class="arithmatex">\(<span class="arithmatex">\(Y_{n}=N_{n}=L(1-u_{n})\)</span>\)</span></p>
+<h3 id="_7">中期<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>需要注意，我们的理论已经进入了经济发展的中期时间，但是为什么我们不像前几章短期研究中一样，考虑货币政策，财政政策？为什么消费者信心之类的因素不影响自然产出？</p>
+<p>因为我们的假设是在中期中实现的，没有理由认为，短期内价格水平能够稳定，也没有理由认为短期内就能做好工资的预测。短期内决定产出的变动的因素依然是货币政策，财政政策等等。</p>
+<p>中期经济研究对短期的启示是，短期内不太可能出现严重的系统性错误。例如，产出率严重偏离自然产出率，失业率严重偏离了自然失业率，这通常意味着经济危机，经济爆发，或者统计出错了。</p>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>货币有一堆定义，但是我们可以根据货币最基本的特性：流通性予以理解。货币在这里就是用于流通交易。详见金融学货币部分。&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>详见微观经济学垄断势力&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>虽然严谨来说确实可以&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>在美国集体谈判作用极其有限，不到10%的工人能够通过集体谈判确定工资，剩下的主要是雇主确定或者个体谈判&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
-<p>为什么要用名义GDP？假定物价固定，实际GDP增长，因此要以需求上升，在任何利率下货币需求都上升。但是如果物价通胀了一倍，你的货币确实要多一倍！所以使用名义GDP。&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>Bargain，到底是工人展示自己的能力还是把自己商品呢？恐怕只有商品才能 Bargain 吧！&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:4">
-<p>你也许注意到了货币需求曲线的末端是几乎水平的，这并非巧合，详见流动性陷阱&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p>参考微观经济学要素市场&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>然而，短期内大多数工人都是根据当下情况进行工资设定。只有到了中期才会逐步调整预期工资&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>因为自然主要特指某些常数，常量或者外生量。&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
