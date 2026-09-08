@@ -143,8 +143,14 @@ nav:
     - 中央银行: finance/finance9.md
     - 货币供需: finance/finance10.md
   
-  # - 计量经济:
-    # - 计量导论: econometrics/econo1.md
+  - 计量经济:
+    - 速览: econometrics/0.md
+    - 单变量方程: econometrics/1.md
+    - 多变量方程: econometrics/2.md
+    - 异方差: econometrics/3.md
+    - 自相关: econometrics/4.md
+    - 内生性: econometrics/5.md
+    - 综合问题: econometrics/6.md
 
   - 宏观经济:
     - 宏观导论: macroeco/0.md

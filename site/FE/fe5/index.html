@@ -1421,6 +1421,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      利率风险管理
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1569,6 +1578,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      利率风险管理
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1624,7 +1642,7 @@ r_F= \frac{r^* (T^*-t)-r(T-t)}{T^*-T}
 <h2 id="_2">解读<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="_3">股指期货<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>股指期货将股指作为标的资产。</p>
-<p>需要注意的是，一旦破坏了无套利条件，例如CME交易的，美元标价的日经225期货，涉及了汇率风险无法消除，被称为 Qanta ，不能使用先前股指期货的定价公式。</p>
+<p>需要注意的是，一旦破坏了无套利条件，例如CME交易的，美元标价的日经225期货，涉及了汇率风险无法消除，被称为 Qanta ，不能使用先前期货的定价公式。</p>
 <p>在套期保值中，我们考虑线性回归方程
 $$
 r_H=\alpha +b' r_G + \varepsilon
@@ -1653,7 +1671,7 @@ $$
 <ul>
 <li>ERA</li>
 </ul>
-<p>ERA就是当前约定<strong>未来</strong>某个时点<strong>远期</strong>升贴水幅度，是远期的远期。实物交割来看可以理解为远期的掉期。</p>
+<p>ERA就是当前约定<strong>未来</strong>某个时点<strong>远期</strong>升贴水幅度，是远期的远期。实物交割来看可以理解为远期的掉期<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>。</p>
 <p>然而，考虑到我国现在外汇管制严格，外汇并不是我们考察的重点。</p>
 <h3 id="_5">远期利率<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p><strong>没有特殊说明，以下所有利率都是年化利率，所有的复利频率都是连续复利。</strong></p>
@@ -1722,7 +1740,7 @@ V(t) = \big[A e^{r_F (T^*-T)} - A e^{r_K (T^*-T)}\big] \cdot e^{-r^* (T^*-t)}
 </tr>
 <tr>
 <td>最小价格波动</td>
-<td>- 近月（≤4 个月）：0.0025 点 = ¼bp = $6.25- 远月：0.005 点 = ½bp = $12.50</td>
+<td>- 近月（≤4 个月）：0.0025 点 = ¼bp = $6.25 - 远月：0.005 点 = ½bp = $12.50</td>
 <td>近月：0.0025 点 = ¼bp = $6.25  远月：0.005 点 = $12.50</td>
 </tr>
 <tr>
@@ -1759,7 +1777,7 @@ R = \left[ \prod_{i=1}^{n} \left(1 + \frac{d_i}{360} \cdot \frac{r_i}{100}\right
 <p>国债期货是如何锁定利率的？严格来说，国债期货只能锁定长期的利率。由于在未来，国债价格与利率波动呈反向关系，所以国债可以用来保值利率。<strong>国债期货本质是远期买卖国债的合约</strong>，通过提前锁定未来国债的成交价格，反向锁定未来的市场利率，规避利率波动风险。</p>
 <p>国债期货具有数个特点，使之变得复杂且难懂：</p>
 <ul>
-<li>标定资产不唯一：全球市场上的国债期货约定，只要是满足特定特征的类似债券，都可用于期货交割，但是由于期货价格的唯一性，需要使用转换因子和标准券进行归一。期货空方也应当具有则券期权。</li>
+<li><strong>标定资产不唯一</strong>：全球市场上的国债期货约定，只要是满足特定特征的类似债券，都可用于期货交割，但是由于期货价格的唯一性，需要使用转换因子和标准券进行归一。期货空方也应当具有择券期权。</li>
 <li>采用与现货相同的净价报价全价交割机制，债券现货应计利息和国债期货的应计利息不同</li>
 <li>
 <p>国债期货标的资产常在合约期限内就付息，这个问题与应计利息问题叠加给初见者带来困扰</p>
@@ -1831,8 +1849,9 @@ $$
 <li>计算使用整数月份，使得转换因子仅是一个近似值</li>
 <li>复利频率不同的两种债券均使用3%贴现率，实际上应当进行计息频率转换</li>
 </ul>
-<p>其中前两点是造成转换因子不完美的主要因素，由于未来时无法预知的，所以理论上这是系统性误差，无法消除。同时，债券流动性差使得空方交割困难。因此，空方有权获得一个<strong>择券期权</strong>选择对自己有利的债券。</p>
-<p>定义交割成本。空头到期买入现货，卖出期货。对期货空头而言，<strong>交割成本</strong> = 买入可交割券的<strong>现券全价</strong>
+<p>其中前两点是造成转换因子不完美的主要因素，由于未来时无法预知的，所以理论上这是系统性误差，无法消除。同时，债券流动性差使得空方交割困难。因此，空方有权获得一个<strong>择券期权</strong>选择对自己有利的债券。什么是最有利的？应当是交割成本最低的。</p>
+<p>我们定义交割成本。空头到期买入现货，卖出期货。</p>
+<p>对期货空头而言，<strong>交割成本</strong> = 买入可交割券的<strong>现券全价</strong>
 $$
 交割实际收入 = 期货交割结算价 × 转换因子 + 交割日应计利息
 $$
@@ -1845,7 +1864,7 @@ $$
 <li><strong>交割净成本最小</strong>（成本最低）</li>
 <li><strong>交割利润最大</strong>（盈利最高）</li>
 </ol>
-<p>然而哪个券是CTD券在交割前是无法预知的，最常用的规则是<span class="arithmatex">\(IRR\)</span>，最高隐含回购利率券就是当下的准CTD券。</p>
+<p>然而哪个券是CTD券在交割前是无法预知的，最常用的规则，是计算<span class="arithmatex">\(IRR\)</span>（隐含回购利率券）最大的就是当下的准CTD券。</p>
 <p><strong>IRR = 借钱买现券 + 卖空期货 + 持有到交割，锁定的年化收益率</strong>。
 $$
 \text{IRR} = \frac{\big(F \times CF + AI_T\big) - \big(P + AI_0\big)}{P + AI_0} \times \frac{365}{T-t}
@@ -1869,6 +1888,18 @@ $$
 <span class="arithmatex">\(B_0\)</span>：<strong>现货全价</strong>（期初买入成本）</p>
 <p><span class="arithmatex">\(B_T\)</span>：<strong>交割全价</strong>（期货交割总收入，<span class="arithmatex">\(B_T = F\cdot CF + AI_T\)</span>）</p>
 <p><span class="arithmatex">\(C_i\)</span>：持有期内第 i 笔票息</p>
+<ol>
+<li>难点四：经验法则</li>
+</ol>
+<h2 id="_9">利率风险管理<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>掉期就是互换&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
